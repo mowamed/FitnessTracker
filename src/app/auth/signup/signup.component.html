@@ -12,6 +12,12 @@
       <mat-error>Has to be be at least 6 character long</mat-error>
     </mat-form-field>
 
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" ngModel placeholder="Choose a date" required name="date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
     <button type="submit" mat-raised-button color="primary">Signup</button>
 
   </form>
