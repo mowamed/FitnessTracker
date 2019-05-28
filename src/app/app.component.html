@@ -1,9 +1,25 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav [(opened)]="opened" mode="over" opened>
+<mat-sidenav-container class="menu-container">
+  <mat-sidenav #sidenav [(opened)]="opened" mode="side" opened>
     Sidenav content
   </mat-sidenav>
   <mat-sidenav-content>
-      <p><button mat-button (click)="sidenav.toggle()">Menu</button></p>
-    <router-outlet></router-outlet>
+    <mat-toolbar color="primary">
+
+
+      <mat-toolbar-row>
+        <span>
+          <button mat-button (click)="sidenav.toggle()">
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example menu icon">menu</mat-icon>
+          </button>
+        </span>
+        <span>Fitness Tracker</span>
+        <span class="example-spacer"></span>
+        <span>Login</span>
+        <span>Sign Up</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -9,3 +9,7 @@ $custom-typography: mat-typography-config($font-family: '"Ubuntu", sans-serif;')
 body, html {
   font-family: 'Product Sans';
 }
+
+body {
+  margin: 0;
+}
